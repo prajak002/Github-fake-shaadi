@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 
 import Loader from "./components/Loader";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
-import About from "./sections/About";
+import BookTickets from "./sections/BookTickets";
 import Footer from "./sections/Footer";
 import Home from "./sections/Home";
 import Marquee from "./sections/Marquee";
@@ -58,7 +58,7 @@ function App() {
               {Loaded ? null : <Loader />}
 
               <Home key="home" />
-              <About key="about" />
+              <BookTickets key="book-tickets" />
               <Shop key="Shop" />
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />

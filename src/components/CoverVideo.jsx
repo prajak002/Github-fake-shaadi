@@ -100,49 +100,44 @@ const CoverVideo = () => {
     <VideoContainer data-scroll>
       <DarkOverlay />
 
+
       <Title variants={container} initial="hidden" animate="show">
         <div>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.13"
+            data-scroll-delay="0.20"
             data-scroll-speed="4"
+            style={{ marginRight: '2rem' }}
           >
-            W
+            Celebrate
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.09"
+            data-scroll-delay="0.40"
             data-scroll-speed="4"
+            style={{ marginRight: '2rem' }}
           >
-            i
+            Love
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.06"
+            data-scroll-delay="0.60"
             data-scroll-speed="4"
           >
-            b
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.04"
-            data-scroll-speed="4"
-          >
-            e
+            Laughter
           </motion.h1>
         </div>
         <motion.h2
-          style={{ alignSelf: "flex-end" }}
+          style={{ alignSelf: "flex-end", marginTop: '2rem' }}
           variants={item}
           data-scroll
-          data-scroll-delay="0.04"
+          data-scroll-delay="1.0"
           data-scroll-speed="2"
         >
-          inspire. create. belive
+          Welcome to the Ultimate Fake Shaadi Experience!
         </motion.h2>
       </Title>
 

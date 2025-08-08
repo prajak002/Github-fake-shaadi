@@ -14,6 +14,10 @@ import img7 from "../assets/Images/7.webp";
 import img8 from "../assets/Images/8.webp";
 import img9 from "../assets/Images/9.webp";
 import img10 from "../assets/Images/10.webp";
+import img11 from "../assets/Images/11.webp";
+import img12 from "../assets/Images/12.webp";
+import img13 from "../assets/Images/13.webp";
+import img14 from "../assets/Images/14.webp";
 
 const Section = styled(motion.section)`
   min-height: 100vh;
@@ -197,33 +201,30 @@ const Shop = () => {
   return (
     <Section ref={ref} id="shop">
       <Title data-scroll data-scroll-speed="-1">
-        New Collection
+        Online Fake Shaadi Photo Gallery
       </Title>
       <Left>
         <p>
-          The brand new collection is currently being developed in USA. We
-          create our products using best quality material, including the use of
-          some of the pure fabrics to make our products. All products are made
-          using the best materials, from the finest cotton to the finest
-          fabrics.
-          <br /> <br />
-          We have lots of different clothing options like shoes, jackets and
-          dresses. Not only clothes but we also provide unique Jewellery as
-          well. It is great for us to carry our new clothes all around the
-          country and look different.
+          Step into the vibrant world of our Online Fake Shaadi Event!<br/><br/>
+          Explore the gallery below to relive the best moments: the virtual baraat, hilarious rituals, sangeet dance-offs, and the most creative wedding outfits ever seen online.<br/><br/>
+          Share your screenshots, join the fun, and don’t forget to book your tickets for the next event!
         </p>
       </Left>
       <Right data-scroll ref={Horizontalref}>
-        <Product img={img3} title="Sweatshirts" />
-        <Product img={img4} title="Ethnic Wear" />
-        <Product img={img1} title="Man Basics" />
-        <Product img={img2} title="Tops" />
-        <Product img={img5} title="Blazers" />
-        <Product img={img6} title="Suits" />
-        <Product img={img7} title="Antiques" />
-        <Product img={img8} title="Jewellery" />
-        <Product img={img9} title="Watches" />
-        <Product img={img10} title="Special Edition" />
+        <Product img={img1} title="Virtual Baraat" />
+        <Product img={img2} title="Online Sangeet" />
+        <Product img={img3} title="Zoom Mehendi" />
+        <Product img={img4} title="Digital Haldi" />
+        <Product img={img5} title="Funniest Shaadi Outfits" />
+        <Product img={img6} title="Best Couple Award" />
+        <Product img={img7} title="Shaadi Games" />
+        <Product img={img8} title="Virtual Food Selfies" />
+        <Product img={img9} title="Online Dance Battle" />
+        <Product img={img10} title="Shaadi Memes" />
+        <Product img={img11} title="Family Reactions" />
+        <Product img={img12} title="Pet Guests" />
+        <Product img={img13} title="Shaadi Selfies" />
+        <Product img={img14} title="Grand Finale" />
       </Right>
     </Section>
   );

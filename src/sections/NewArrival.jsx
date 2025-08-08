@@ -8,6 +8,9 @@ import img1 from '../assets/Images/11.webp';
 import img2 from '../assets/Images/12.webp';
 import img3 from '../assets/Images/13.webp';
 import img4 from '../assets/Images/14.webp';
+import img5 from '../assets/Images/1.webp';
+import img6 from '../assets/Images/2.webp';
+import img7 from '../assets/Images/3.webp';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -218,28 +221,23 @@ let t1= gsap.timeline();
       <Title
         data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
       >
-        New Arrivals
+        Fake Shaadi Online Gallery
       </Title>
 
       <Container ref={ScrollingRef}>
-        <Photos img={img1} name="Denim" />
-        <Photos img={img2} name="Cool Dresses" />
-        <Photos img={img3} name="Jackets" />
-        <Photos img={img4} name="T-shirts" />
+        <Photos img={img1} name="Bride & Groom Entrance" />
+        <Photos img={img2} name="Virtual Sangeet" />
+        <Photos img={img3} name="Online Haldi" />
+        <Photos img={img4} name="Shaadi Selfies" />
+        <Photos img={img5} name="Funniest Family Moments" />
+        <Photos img={img6} name="Pet Guests" />
+        <Photos img={img7} name="Zoom Dance Floor" />
       </Container>
 
       <Text data-scroll data-scroll-speed="-4">
-        There is new collection available for cool clothes in all sizes. This collection
-        is a great way to find a new look for you. It offers a variety of cool apparel
-        styles to fit your taste, while you can also find some cool clothes that you can
-        wear everyday.
-        <br />
-        <br />
-        The first line of clothing you will see on this collection is for men. The
-        collection also includes three new styles for women.
-        <br />
-        <br />
-        Give it a try and experience a new look.
+        Dive into our exclusive online photo gallery from the latest Fake Shaadi event!<br/><br/>
+        From the grand virtual entrance to the wildest dance moves, every moment is captured for you to relive and share. See the best-dressed guests, hilarious rituals, and even pets joining the celebration!<br/><br/>
+        Want to be featured in the next gallery? Book your tickets and join the fun!
       </Text>
     </Section>
   );
