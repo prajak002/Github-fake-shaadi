@@ -63,9 +63,9 @@ function App() {
               {Loaded ? null : <Loader />}
 
               <Home key="home" />
+              <BookTickets key="book-tickets" />
               <Shop key="about-event" />
               <NewArrival key="gallery" />
-              <BookTickets key="book-tickets" />
               <Marquee key="venue-details" />
               <FAQ key="faq-terms" />
               <Footer key="Footer" />
