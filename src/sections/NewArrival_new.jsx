@@ -19,54 +19,21 @@ import img12 from '../assets/Images/12.webp';
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 90vw;
-  margin: 2rem auto;
-  padding: 6rem 0;
-  background: ${(props) => props.theme.glassMedium};
-  backdrop-filter: blur(25px);
-  border-radius: ${(props) => props.theme.radiusLarge};
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: ${(props) => props.theme.gradient2};
-    border-radius: ${(props) => props.theme.radiusLarge} ${(props) => props.theme.radiusLarge} 0 0;
-  }
 `;
 
 const Title = styled(motion.h1)`
   font-size: ${(props) => props.theme.fontxxxl};
   font-family: 'Kaushan Script';
-  font-weight: 400;
-  background: ${(props) => props.theme.gradient2};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 300;
+  color: white;
   text-align: center;
   margin-bottom: 3rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: ${(props) => props.theme.gradient2};
-    border-radius: 2px;
-  }
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 64em) {
     font-size: ${(props) => props.theme.fontxxl};
@@ -91,65 +58,44 @@ const GalleryContainer = styled.div`
 `;
 
 const PhotoCard = styled(motion.div)`
-  background: ${(props) => props.theme.glassHeavy};
-  backdrop-filter: blur(25px);
-  border-radius: ${(props) => props.theme.radiusLarge};
-  padding: 1.5rem;
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: white;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: ${(props) => props.theme.gradient2};
-    border-radius: ${(props) => props.theme.radiusLarge} ${(props) => props.theme.radiusLarge} 0 0;
-  }
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-10px) scale(1.02);
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 
-      0 16px 64px 0 rgba(31, 38, 135, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   }
 
   img {
     width: 100%;
-    height: 280px;
+    height: 250px;
     object-fit: cover;
-    border-radius: ${(props) => props.theme.radiusMedium};
-    transition: transform 0.4s ease;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
   }
 
   &:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   h3 {
     font-size: ${(props) => props.theme.fontmd};
     font-weight: 600;
-    margin: 1.5rem 0 0.8rem;
+    margin: 1rem 0 0.5rem;
     color: ${(props) => props.theme.text};
     text-align: center;
-    font-family: 'Kaushan Script';
   }
 
   p {
     font-size: ${(props) => props.theme.fontsm};
-    color: ${(props) => props.theme.greyDark};
+    color: #666;
     text-align: center;
     margin-bottom: 1rem;
-    line-height: 1.6;
   }
 `;
 
@@ -173,22 +119,16 @@ const ViewMoreButton = styled(motion.button)`
 `;
 
 const DescriptionText = styled(motion.div)`
-  width: 85%;
-  margin: 0 auto 4rem;
+  width: 80%;
+  margin: 0 auto 3rem;
   text-align: center;
-  color: ${(props) => props.theme.text};
+  color: white;
   font-size: ${(props) => props.theme.fontmd};
-  line-height: 1.8;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: ${(props) => props.theme.radiusLarge};
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 1.6;
   
   @media (max-width: 48em) {
     width: 90%;
     font-size: ${(props) => props.theme.fontsm};
-    padding: 1.5rem;
   }
 `;
 

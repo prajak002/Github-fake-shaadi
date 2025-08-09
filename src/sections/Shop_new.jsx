@@ -6,147 +6,70 @@ import styled from "styled-components";
 
 const Section = styled(motion.section)`
   min-height: 100vh;
-  width: 85vw;
+  width: 80vw;
   margin: 0 auto;
-  padding: 6rem 0;
+  padding: 4rem 0;
   position: relative;
-  background: ${(props) => props.theme.glassMedium};
-  backdrop-filter: blur(25px);
-  border-radius: ${(props) => props.theme.radiusLarge};
-  margin-top: 2rem;
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: ${(props) => props.theme.gradientOverlay};
-    border-radius: ${(props) => props.theme.radiusLarge};
-    z-index: -1;
-  }
 
   @media (max-width: 48em) {
     width: 90vw;
-    padding: 4rem 0;
   }
 `;
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
   font-family: "Kaushan Script";
-  font-weight: 400;
-  color: white;
+  font-weight: 300;
+  color: ${(props) => props.theme.text};
   text-align: center;
-  margin-bottom: 4rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: ${(props) => props.theme.gradient2};
-    border-radius: 2px;
-  }
+  margin-bottom: 3rem;
 
   @media (max-width: 64em) {
     font-size: ${(props) => props.theme.fontxxl};
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
-    margin-bottom: 3rem;
   }
 `;
 
 const EventCard = styled(motion.div)`
-  background: ${(props) => props.theme.glassHeavy};
-  backdrop-filter: blur(30px);
-  border-radius: ${(props) => props.theme.radiusLarge};
-  padding: 4rem;
-  margin: 3rem 0;
-  color: ${(props) => props.theme.text};
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: ${(props) => props.theme.gradient2};
-  }
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem 0;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
   h2 {
     font-size: ${(props) => props.theme.fontxxl};
     font-family: "Kaushan Script";
-    margin-bottom: 2rem;
-    background: ${(props) => props.theme.gradient2};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 1rem;
   }
 
   p {
     font-size: ${(props) => props.theme.fontmd};
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: ${(props) => props.theme.greyDark};
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .date-venue {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
     
     @media (max-width: 48em) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      flex-direction: column;
     }
   }
 
   .info-box {
-    background: ${(props) => props.theme.glassMedium};
-    backdrop-filter: blur(20px);
-    padding: 2rem;
-    border-radius: ${(props) => props.theme.radiusMedium};
-    box-shadow: 
-      0 4px 16px 0 rgba(31, 38, 135, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-      background: ${(props) => props.theme.glassHeavy};
-    }
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
     
-    h4 {
-      font-size: ${(props) => props.theme.fontlg};
+    @media (max-width: 48em) {
       margin-bottom: 1rem;
-      color: ${(props) => props.theme.text};
-      font-weight: 600;
-    }
-    
-    p {
-      color: ${(props) => props.theme.text};
-      margin: 0;
     }
   }
 `;
@@ -159,107 +82,49 @@ const DetailsGrid = styled.div`
 `;
 
 const DetailCard = styled(motion.div)`
-  background: ${(props) => props.theme.glassMedium};
-  backdrop-filter: blur(20px);
-  border-radius: ${(props) => props.theme.radiusLarge};
-  padding: 3rem;
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: ${(props) => props.theme.gradient2};
-  }
-
-  &:hover {
-    transform: translateY(-10px);
-    background: ${(props) => props.theme.glassHeavy};
-    box-shadow: 
-      0 16px 64px 0 rgba(31, 38, 135, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  }
+  background: ${(props) => props.theme.body};
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid ${(props) => props.theme.text};
 
   h3 {
     font-size: ${(props) => props.theme.fontlg};
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: ${(props) => props.theme.text};
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
   }
 
   p {
     font-size: ${(props) => props.theme.fontmd};
-    line-height: 1.8;
-    color: ${(props) => props.theme.greyDark};
+    line-height: 1.5;
+    color: ${(props) => props.theme.text};
   }
 
   .price {
     font-size: ${(props) => props.theme.fontlg};
     font-weight: bold;
-    background: ${(props) => props.theme.gradient2};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-top: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: ${(props) => props.theme.radiusMedium};
-    background-color: ${(props) => props.theme.glassLight};
-    backdrop-filter: blur(10px);
+    color: #ff6b9d;
+    margin-top: 1rem;
   }
 `;
 
 const BookButton = styled(motion.button)`
-  background: ${(props) => props.theme.gradient2};
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
   border: none;
-  padding: 1.5rem 3rem;
-  border-radius: ${(props) => props.theme.radiusLarge};
+  padding: 1rem 2rem;
+  border-radius: 50px;
   color: white;
   font-size: ${(props) => props.theme.fontmd};
   font-weight: 600;
   cursor: pointer;
-  margin: 3rem auto;
+  margin: 2rem auto;
   display: block;
-  box-shadow: ${(props) => props.theme.shadowMedium};
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s;
-  }
-
-  &:hover::before {
-    left: 100%;
-  }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: ${(props) => props.theme.shadowGlow};
-  }
-
-  &:active {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   }
 `;
 

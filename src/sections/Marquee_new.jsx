@@ -6,30 +6,13 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 85vw;
-  margin: 2rem auto;
-  padding: 6rem 0;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 4rem 0;
   position: relative;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: ${(props) => props.theme.radiusLarge};
-  box-shadow: ${(props) => props.theme.shadowHeavy};
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: ${(props) => props.theme.gradient2};
-    border-radius: ${(props) => props.theme.radiusLarge} ${(props) => props.theme.radiusLarge} 0 0;
-  }
 
   @media (max-width: 48em){
     width: 90vw;
-    padding: 4rem 0;
   } 
 `;
 
@@ -63,52 +46,36 @@ const Title = styled(motion.h1)`
 `;
 
 const VenueCard = styled(motion.div)`
-  background: ${(props) => props.theme.glassMedium};
-  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 20px;
   padding: 3rem;
-  color: ${(props) => props.theme.text};
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 600px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 
-      0 16px 64px 0 rgba(31, 38, 135, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  }
 
   h2 {
     font-size: ${(props) => props.theme.fontxxl};
     font-family: 'Kaushan Script';
     margin-bottom: 1.5rem;
-    color: ${(props) => props.theme.text};
   }
 
   .venue-details {
     font-size: ${(props) => props.theme.fontlg};
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: ${(props) => props.theme.greyDark};
   }
 
   .tech-requirements {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 1.5rem;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     
     h3 {
       font-size: ${(props) => props.theme.fontlg};
       margin-bottom: 1rem;
-      color: ${(props) => props.theme.text};
     }
     
     ul {
@@ -118,7 +85,6 @@ const VenueCard = styled(motion.div)`
       li {
         margin: 0.5rem 0;
         font-size: ${(props) => props.theme.fontmd};
-        color: ${(props) => props.theme.greyDark};
         
         &:before {
           content: "✓ ";
@@ -139,24 +105,12 @@ const EventDetailsGrid = styled.div`
 `;
 
 const DetailCard = styled(motion.div)`
-  background: ${(props) => props.theme.glassLight};
-  backdrop-filter: blur(15px);
+  background: ${(props) => props.theme.body};
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid ${(props) => props.theme.text};
   text-align: center;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 
-      0 16px 64px 0 rgba(31, 38, 135, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  }
 
   .icon {
     font-size: 3rem;
@@ -173,7 +127,7 @@ const DetailCard = styled(motion.div)`
   p {
     font-size: ${(props) => props.theme.fontmd};
     line-height: 1.5;
-    color: ${(props) => props.theme.greyDark};
+    color: ${(props) => props.theme.text};
   }
 
   .highlight {
@@ -185,7 +139,7 @@ const DetailCard = styled(motion.div)`
 `;
 
 const ContactButton = styled(motion.button)`
-  background: ${(props) => props.theme.gradient2};
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
   border: none;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -193,19 +147,12 @@ const ContactButton = styled(motion.button)`
   font-size: ${(props) => props.theme.fontmd};
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   margin-top: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 
-      0 16px 64px 0 rgba(31, 38, 135, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   }
 `;
 
